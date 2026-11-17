@@ -21,7 +21,7 @@ def pick_keeper(group: DuplicateGroup, strategy: KeepStrategy = "oldest") -> Pat
     if strategy == "shortest":
         return min(paths, key=lambda p: (len(str(p)), str(p)))
     if strategy == "first":
-        return sorted(paths)[0]
+        return min(paths)
     raise ValueError(f"unknown keep strategy: {strategy!r}")
 
 

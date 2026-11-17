@@ -14,10 +14,11 @@ import fnmatch
 import hashlib
 import os
 from collections import defaultdict
+from collections.abc import Iterable, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Callable, Iterable, Iterator
+from typing import Callable
 
 PARTIAL_BYTES = 4096
 CHUNK_SIZE = 1024 * 1024
